@@ -5,6 +5,6 @@ Hexo files
 ```bash
   $ npm install hexo
   $ npm install
-  $ npm install hexo-developer-git
+  $ npm install hexo-deployer-git
 ```
 `hexo init` is not needed
