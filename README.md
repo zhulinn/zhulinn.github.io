@@ -1,10 +1,10 @@
 # zhulinn.github.io
 Hexo files
 
-####init
+#### init
 ```bash
-  npm install hexo
-  npm install
-  npm install hexo-developer-git
+  $ npm install hexo
+  $ npm install
+  $ npm install hexo-developer-git
 ```
-'hexo init' is not needed
+`hexo init` is not needed
