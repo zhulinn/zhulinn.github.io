@@ -83,15 +83,15 @@ deploy:
   repo: https://github.com/zhulinn/zhulinn.github.io.git
   branch: master
 
-# Search Engine
-#algolia:
- # applicationID: 'CMCGM52E1J'
+# #Search Engine
+# algolia:
+#  applicationID: 'CMCGM52E1J'
 #  apiKey: '002a7f1ee01196bec5933b1127a6b2ac'
- # indexName: 'blog'
-  #chunkSize: 5000
-search:
-  path: search.xml
-  field: post
-  format: html
-  limit: 10000
+#  indexName: 'blog'
+#   chunkSize: 5000
+# search:
+#   path: search.xml
+#   field: post
+#   format: html
+#   limit: 10000
 

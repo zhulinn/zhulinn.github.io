@@ -534,7 +534,7 @@ rating:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: true
+  enable: false
   app_id:  X0exrnIg9xNhBTrXbYBd7bTa-gzGzoHsz
   app_key:  WEXh5cT0XDBcbwQL8lDHH4R9
 
@@ -607,7 +607,7 @@ algolia_search:
 # Local search
 # Dependencies: https://github.com/flashlab/hexo-generator-search
 local_search:
-  enable: true
+  enable: false
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button
   trigger: auto
