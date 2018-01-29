@@ -79,7 +79,7 @@ seo: false
 
 # If true, will add site-subtitle to index page, added in main hexo config.
 #subtitle: Subtitle
-index_with_subtitle: false
+index_with_subtitle: true
 
 
 # ---------------------------------------------------------------
@@ -364,7 +364,7 @@ han: true
 # Disqus
 disqus:
   enable: true
-  shortname: blogwoods
+  shortname: woods-blog
   count: true
 
 # Hypercomments
