@@ -3,16 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Woods
+title: In the Woods
 subtitle: 
-description: Go Big or Go Home.
+description: Artistic Geek & Movie Lover
 author: Woods
 language: 
+- en
+- zh-Hans
 timezone: 
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://yoursite.com/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -82,8 +84,14 @@ deploy:
   branch: master
 
 # Search Engine
-algolia:
-  applicationID: 'CMCGM52E1J'
-  apiKey: '2b63fe2bf97dc7e9371d916e32e67263'
-  indexName: 'blog'
-  chunkSize: 5000
+#algolia:
+ # applicationID: 'CMCGM52E1J'
+#  apiKey: '002a7f1ee01196bec5933b1127a6b2ac'
+ # indexName: 'blog'
+  #chunkSize: 5000
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
