@@ -7,9 +7,9 @@ categories: 日常
 # ***引导原理***
 接通电源 → 启动bios → esp分区 → /EFI/boot/bootx64.efi →   
 /EFI/Microsoft/BCD → 系统分区 → /Windows/system32/winload.exe
-
 # ***手动修复引导***
 1. 转换硬盘格式为GPT
+<!-- more -->
 2. 新建esp分区 或FAT16类型
 3. esp分区下文件目录
 ```
