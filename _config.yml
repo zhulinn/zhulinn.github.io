@@ -16,7 +16,7 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://zhulin.me/
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :title/
 permalink_defaults:
 
 # Directory
@@ -89,9 +89,10 @@ deploy:
 #  apiKey: '002a7f1ee01196bec5933b1127a6b2ac'
 #  indexName: 'blog'
 #   chunkSize: 5000
-# search:
-#   path: search.xml
-#   field: post
-#   format: html
-#   limit: 10000
+
+# sitemap
+sitemap:
+ path: sitemap.xml
+baidusitemap:
+ path: baidusitemap.xml
 
