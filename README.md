@@ -1,7 +1,7 @@
 # My Blog
-Check here :point_right: [https://zhulin.me](https://zhulin.me)
-Created with [Hexo](https://hexo.io/)
-Deployed on [Netlify](https://www.netlify.com/)
+Check here :point_right: [https://zhulin.me](https://zhulin.me)  
+Created with [Hexo](https://hexo.io/)  
+Deployed on [Netlify](https://www.netlify.com/)  
 
 #### Initialize
 ```bash
