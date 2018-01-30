@@ -1,5 +1,7 @@
-# zhulinn.github.io
-Hexo files
+# My Blog
+Check here :point_right: [https://zhulin.me](https://zhulin.me)
+Created with [Hexo](https://hexo.io/)
+Deployed on [Netlify](https://www.netlify.com/)
 
 #### Initialize
 ```bash
@@ -7,4 +9,4 @@ Hexo files
   $ npm install
   $ npm install hexo-deployer-git
 ```
-`hexo init` is not needed
+
