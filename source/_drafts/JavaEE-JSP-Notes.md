@@ -1,5 +1,5 @@
 ---
-title: {{ title }}
+title: JavaEE JSP Notes
 categories:
 tags:
 ---

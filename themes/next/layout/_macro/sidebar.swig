@@ -96,7 +96,7 @@
             <div class="links-of-author motion-element">
                 {% for name, link in theme.social %}
                   <span class="links-of-author-item">
-                    <a href="{{ link.split('||')[0] | trim }}" target="_blank" title="{{ name }}">
+                    <a href="{{ link.split('||')[0] | trim }}" target="_blank" title="{{ name }}" rel="external nofollow">
                       {% if theme.social_icons.enable %}
                         <i class="fa fa-fw fa-{{ link.split('||')[1] | trim | default('globe') }}"></i>{#
                     #}{% endif %}{#
@@ -112,7 +112,7 @@
           {% set cc = {'by': 1, 'by-nc': 1, 'by-nc-nd': 1, 'by-nc-sa': 1, 'by-nd': 1, 'by-sa': 1, 'zero': 1} %}
           {% if theme.creative_commons in cc %}
             <div class="cc-license motion-element" itemprop="license">
-              <a href="https://creativecommons.org/{% if theme.creative_commons === 'zero' %}publicdomain/zero/1.0{% else %}licenses/{{ theme.creative_commons }}/4.0{% endif %}/" class="cc-opacity" target="_blank">
+              <a href="https://creativecommons.org/{% if theme.creative_commons === 'zero' %}publicdomain/zero/1.0{% else %}licenses/{{ theme.creative_commons }}/4.0{% endif %}/" class="cc-opacity" target="_blank" rel="external nofollow">
                 <img src="{{ url_for(theme.images) }}/cc-{{ theme.creative_commons }}.svg" alt="Creative Commons" />
               </a>
             </div>

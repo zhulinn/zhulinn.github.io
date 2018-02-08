@@ -48,7 +48,7 @@
 {% if theme.baidu_site_verification %}
   <meta name="baidu-site-verification" content="{{ theme.baidu_site_verification }}" />
 {% endif %}
-<meta name="baidu-site-verification" content="0j7dHiXSag" />
+
 
 {% if theme.qihu_site_verification %}
   <meta name="360-site-verification" content="{{ theme.qihu_site_verification }}" />
