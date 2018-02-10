@@ -16,9 +16,22 @@ date: 2018-02-08 11:56:15
 * **Miscellaneous Task** – Web container manages the resource pool, does memory optimizations, run garbage collector, provides security configurations, support for multiple applications, hot deployment and several other tasks behind the scene that makes our life easier.
 
 ------
+# The principle when programming Servlet + JSP
+1. Never allow users to directly access to your JSP page.
+Set JSP files in the **WEB-INF** folder or its subdirectories.
+2. JSP is only considered as the place to display interface.
+
+3. Servlet acts as the controller of the application flows and  program logical processing.
+4. Open the JDBC connection and transaction management in Filter (Optional).
+
+------
 # Web Application Directory Structure
 ![Dierectory Structure][1]
   [1]: https://cdn.journaldev.com/wp-content/uploads/2013/08/WAR-directory-structure-450x233.png
+
+---
+# URL
+![URL](https://github.com/zhulinn/zhulinn.github.io/blob/hexo/source/uploads/url-pattern.png)
 
 ---
 # Session

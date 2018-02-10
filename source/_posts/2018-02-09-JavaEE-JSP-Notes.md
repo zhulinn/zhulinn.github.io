@@ -1,9 +1,12 @@
-﻿---
-title: JavaEE JSP Notes
-categories: JavaEE
-tags: 
-- JSP
 ---
+layout: '[post]'
+title: JavaEE JSP Notes
+tags:
+  - JSP
+categories: JavaEE
+date: 2018-02-09 19:26:24
+---
+
 # Life cycle of JSP Page
 1. Translation
 e.g. home.jsp -> home_jsp.java
