@@ -62,7 +62,8 @@ Two ways
 # Expression Language(EL)
 We can disable EL expression in JSP by setting `isELIgnored` to `true`.
 ## EL Implicati Objects
-e.g. `pageScope`, `requestScope`, `sessionScope`...  -- Map type
+e.g. `pageScope`, `requestScope`, `sessionScope`, `applicationScope`, `param`, `paramValues`, `header`, `headerValues`, `cookie`, `initParam`  -- Map type
+>If scope is not provided, the JSP EL looks into page, request, session and application scope to find the named attribute.
 `pageContext` -- pageContext type
 ## EL Operators
 1. Dot or Access Operator `.`
@@ -225,3 +226,6 @@ public class NumberFormatterTag extends SimpleTagSupport {
   </taglib>
 </jsp-config
 ```
+
+
+**Refefence:**[JSP EL Tutorial][https://www.journaldev.com/2064/jsp-expression-language-el-example-tutorial]
