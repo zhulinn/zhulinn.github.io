@@ -63,8 +63,10 @@ Two ways
 We can disable EL expression in JSP by setting `isELIgnored` to `true`.
 ## EL Implicati Objects
 e.g. `pageScope`, `requestScope`, `sessionScope`, `applicationScope`, `param`, `paramValues`, `header`, `headerValues`, `cookie`, `initParam`  -- Map type
->If scope is not provided, the JSP EL looks into page, request, session and application scope to find the named attribute.
 `pageContext` -- pageContext type
+
+>If scope is not provided, the JSP EL looks into page, request, session and application scope to find the named attribute.
+
 ## EL Operators
 1. Dot or Access Operator `.`
 `${firstObj.secondObj}`
