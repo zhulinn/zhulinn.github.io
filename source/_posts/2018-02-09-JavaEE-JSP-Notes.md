@@ -11,6 +11,7 @@ date: 2018-02-09 19:26:24
 1. Translation
 e.g. home.jsp -> home_jsp.java
 2. Compilation
+<!-- more -->
 e.g. home_jsp.java -> home_jsp.class
 3. Class Loading
 4. Instance Creation
@@ -18,7 +19,7 @@ e.g. home_jsp.java -> home_jsp.class
 6. Request Processing
 7. Destroy
 
-<!-- more -->
+
 # JSP Implicit Object
 * out Object
 Output content to be sent in client response. `out.print()` is same as <%= %>
