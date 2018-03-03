@@ -1,8 +1,7 @@
 ---
 title: Java面试题总结
-categories: Java SE
+categories:
 tags:
-- 面试
 ---
 <!--https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/XXX.png-->
 
@@ -123,23 +122,13 @@ IO阻塞式，读取数据，程序等待直至读完。
 NIO非阻塞式，读取数据，程序继续向下执行。读完数据后通知当前程序（回调）。
 
  JVM内存模型
-Java运行时(Java runtime)内存模型。五大区：方法区、堆区、虚拟机栈、本地方法栈、程序计数器。
+Java运行时(Java runtime)内存模型。方法区、堆区、虚拟机栈、本地方法栈、程序计数器。
 ![](https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/JMM.png)
-程序计数器：线程私有，保存当前线程执行的虚拟机字节码指令的内存地址。多线程切换后，恢复原先状态，找到原先执行的指令。
-虚拟机栈：线程私有，包含多个栈帧，存储方法数据和部分过程结果的数据结构。方法的调用到返回结果，对应一个栈帧的入栈到出栈。
-本地方法栈：同虚拟机栈，适用于Native方法。
-方法区：存储类结构信息的地方，包括常量池，静态变量，构造函数等，类型信息由类加载器在加载时从类文件提取出来。线程共享。存在垃圾收集。
-堆：存储java实例或对象的地方，GC的主要区域。线程共享
 
  内存中Stack，Heap和Static area用法
 * 栈Stack：基本数据类型变量，对象的引用，函数调用的现场保存
 * 堆Heap：通过new、构造器创建的对象
 * 静态区Static Area：常量， 字面量(literal)，如100，“hello”
-
- 类加载器
-系统会通过**加载**、**连接**（验证-准备(初始值)-解析(符号引用=>内存地址的直接引用)）、**初始化**三个过程来对该类进行初始化。使用一个类之前，JVM需要先将该类的字节码文件（.class文件）从磁盘、网络或其他来源加载到内存中，并对字节码进行解析生成对应的Class对象。
-![](https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/classloader.png))
-双亲委托机制：优先最上层parent加载器加载。解决类加载的统一性问题，保证了基类都由相同的类加载器加载。
 
  StringBuffer vs StringBuilder
 都是mutable。StringBuffer的所有方法synchronized，StringBuilder非线程安全。
@@ -196,5 +185,3 @@ ReentrantLock: 实现Lock接口。
 Executor接口是Executor框架最基础的部分，定义用于执行Runnable的execute方法。
 ExecutorService接口继承Executor接口，execute()执行Runnable任务，submit()执行Callable或Runnable任务，并返回Future结果。
 Future接口：判断任务是否完成；中断任务；获取执行结果。
-
-垃圾收集
