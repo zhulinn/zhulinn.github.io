@@ -1,24 +1,27 @@
 ---
+layout: '[post]'
 title: JVM知识点
 categories: Java SE
 tags:
   - JVM
 date: 2018-03-02 22:42:14
 ---
+
 <!--https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/WAR-directory-structure.png-->
 <!-- 
 {% fold Click %}
 something you want to fold, include code block.
 {% endfold %}
 -->
-<!-- more -->
+
 <!--https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/XXX.png-->
+
 > Reference: [纯洁的微笑][http://www.ityouknow.com/java/2017/03/01/jvm-overview.html]
 
 # 类的加载
 ## 类加载的定义
 将类的`.class`文件中的二进制数据读入到内存中，将其放在运行时数据取的**方法区**内，然后在**堆区**创建`java.lang.Class`对象，封装方法区内的数据结构。Class对象**封装**方法区的数据结构，提供访问方法区的数据结构的**接口**。
-
+<!-- more -->
 ## 类加载的过程
 ![](https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/class-loading.png)
 1. 加载，查找并加载类的二进制数据，在Java堆中也创建一个java.lang.Class类的对象
