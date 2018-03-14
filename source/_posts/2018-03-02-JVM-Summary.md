@@ -94,4 +94,4 @@ Java运行时(Java runtime)内存模型。五大区：方法区、堆区、虚�
 * Parallel Old老年代并行回收收集器：多线程版，关注吞吐量
 * CMS收集器：并发式Concurrent Mark Sweep，标记-清除算法。关注于系统停顿时间
 * G1收集器：服务器的，标记-压缩算法
-![gc](https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/GC.png)
+![gc](https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/GC.PNG)
