@@ -6,21 +6,8 @@ tags:
 date: 2018-03-15 10:12:58
 ---
 
-<!-- 
-{% fold Click %}
-something you want to fold, include code block.
-{% endfold %} -->
-
-<!-- https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/XXX.png -->
-
-<!-- more -->
-
-<!-- 
-{% fold Click %}
-something you want to fold, include code block.
-{% endfold %} -->
-Demo: [E-Shop](https://e-shop-.herokuapp.com)
-Github: [Online Shop Store](https://github.com/zhulinn/Online-Shopping-Store)
+**Demo:** [E-Shop](https://e-shop-.herokuapp.com)
+**Github:** [Online Shop Store](https://github.com/zhulinn/Online-Shopping-Store)
 <img src="https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/shop-cart.png">
 <!-- more -->
 <img src="https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/shop-product.png">
