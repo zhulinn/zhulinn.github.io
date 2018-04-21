@@ -7,14 +7,6 @@ date: 2018-04-19 16:16:02
 ---
 
 
-
----
-title: Network基础知识
-categories: Network
-tags:
-- 面试
----
-
 **Refefence:**[Interview-Notebook][https://github.com/CyC2018/Interview-Notebook]
 
 # 主机之间的通信方式
@@ -39,10 +31,10 @@ tags:
 * 传输控制协议 TCP（Transmission Control Protocol） 是面向连接的，提供可靠交付，有流量控制，拥塞控制，提供全双工通信，面向**字节流**（把应用层传下来的报文看成字节流，把字节流组织成大小不等的数据块）
 
 # TCP三次握手
-![3](https://raw.githubusercontent.com/CyC2018/Interview-Notebook/master/pics/086871db-5871-460f-97b7-126cd738bb0e.jpg)
+![3](https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/TCP3.png)
 
 # TCP四次挥手
-![4](https://raw.githubusercontent.com/CyC2018/Interview-Notebook/master/pics/78f65456-666b-4044-b4ee-f7692dbbc0d3.jpg)
+![4](https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/TCP4.jpg)
 ### TIME_WAIT
 1. 确保最后一个确认报文段能够到达。如果 B 没收到 A 发送来的确认报文段，那么就会重新发送连接释放请求报文段，A 等待一段时间就是为了处理这种情况的发生。
 2. 可能存在“已失效的连接请求报文段”，为了防止这种报文段出现在本次连接之外，需要等待一段时间。
@@ -57,9 +49,9 @@ tags:
 
 # 请求与响应报文
 * 请求报文
-![req](https://raw.githubusercontent.com/CyC2018/Interview-Notebook/master/pics/22b39f77-ac47-4978-91ed-84aaf457644c.jpg)
+![req](https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/HTTP_ResponseMessageExample.png)
 * 响应报文
-![res](https://raw.githubusercontent.com/CyC2018/Interview-Notebook/master/pics/00d8d345-cd4a-48af-919e-209d2788eca7.jpg)
+![res](https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/HTTP_RequestMessageExample.png)
 
 # HTTP 状态码
 
