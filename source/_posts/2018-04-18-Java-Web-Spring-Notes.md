@@ -14,6 +14,8 @@ The act of wiring beans together is based on a pattern known as **dependency inj
 
 # Spring Bean
 Any object initialized through Spring container.
+
+<!-- more -->
 ## Bean Scopes
 1. singleton - Only one instance of the bean.
 2. prototype - A new instance will be created every time the bean is requested.
@@ -23,6 +25,8 @@ Any object initialized through Spring container.
 
 ## Bean Configuration
 1. **XML Based Configuration** 
+
+
 ```xml
 <beans:beans>
 	
@@ -32,7 +36,9 @@ Any object initialized through Spring container.
 	
 </beans:beans>
 ```
+
 2. **Annotation Based Configuration** - @Service or @Component, @Scope
+
 ```java
 package com.journaldev.spring.beans;
 
@@ -52,6 +58,7 @@ public class MyAnnotatedBean {
 	
 }
 ```
+
 ```java
 @Controller
 @Scope("request")
@@ -63,7 +70,9 @@ public class HomeController {
 	
 }
 ```
+
 3. **Java Based Configuration** -  @Configuration, @ComponentScan and @Bean
+
 ```java
 package com.journaldev.spring.main;
 
@@ -76,6 +85,7 @@ public class MyService {
 	}
 }
 ```
+
 ```java
 package com.journaldev.spring.main;
 
@@ -95,7 +105,7 @@ public class MyConfiguration {
 ```
 
 
-3. 隐式的bean发现机制和自动装配
+## 隐式的bean发现机制和自动装配
     - 组件扫描(component scanning)
     - 自动装配(autowiring)
 

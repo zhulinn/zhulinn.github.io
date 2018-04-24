@@ -1,19 +1,11 @@
 ---
-title: Network基础知识
-categories: Network
+title: 分布式基础知识
+categories: 分布式
 tags:
   - 面试
 date: 2018-04-15 23:57:27
 ---
 
-
-
----
-title: 分布式基础知识
-categories: 分布式
-tags:
-- 面试
----
 
 **Refefence:**[Interview-Notebook][https://github.com/CyC2018/Interview-Notebook]
 
@@ -22,6 +14,7 @@ tags:
 1. 轮询
 轮询算法把每个请求轮流发送到每个服务器上。该算法比较适合每个服务器的性能差不多的场景。
 ![](https://raw.githubusercontent.com/CyC2018/Interview-Notebook/master/pics/2766d04f-7dad-42e4-99d1-60682c9d5c61.jpg)
+<!-- more -->
 2. 加权轮询
 加权轮询是在轮询的基础上，根据服务器的性能差异，为服务器赋予一定的权值。
 ![](https://raw.githubusercontent.com/CyC2018/Interview-Notebook/master/pics/211c60d4-75ca-4acd-8a4f-171458ed58b4.jpg)
