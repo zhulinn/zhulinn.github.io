@@ -26,7 +26,10 @@ Amazon对新用户提供一些一年免费的服务。我们需要用的就是AW
 (虚拟服务器)。需要注意的是：
 * EC2每个月有750个小时的免费使用时间。这个时长是所有实例运行时间的总长，如果你只有一个实例，完全可以满足24小时的全天候运行。
 * 每个月上传/下载各15GB免费流量。VPN服务器主要使用的是下载流量。15GB足够满足个人使用。
-* 还有一些免费额度，一般不会超额。建议大家开启超额预警，同时在官网上关注自己的使用情况。
+* 还有一些免费额度，一般不会超额。建议大家开启超额预警，同时在账单页面关注自己的使用情况。
+![](../uploads/post_pics/AWS/billing.png)
+![](../uploads/post_pics/AWS/alert.png)
+![](../uploads/post_pics/AWS/usage.png)
 
 # 流程
 这里我们使用Amazon EC2作为海外服务器，通过安装shadowsocks服务器版，架设VPN服务器。在手机、电脑上安装shadowsocks客户端，科学上网。
@@ -128,7 +131,6 @@ vim /etc/shadowsocks/ss.json
 
 ### 4. 启动shadowsocks
 启动：`sudo /usr/local/bin/ssserver -c /etc/shadowsocks/ss.json -d start`
-
 停止：`sudo /usr/local/bin/ssserver -c /etc/shadowsocks/ss.json -d stop`  
 重启：`sudo /usr/local/bin/ssserver -c /etc/shadowsocks/ss.json -d restart`
 
