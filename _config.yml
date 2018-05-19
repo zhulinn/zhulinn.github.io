@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: In the Woods
+title: Woods
 subtitle: CODE IS POETRY
 description: Artistic Geek & Film Lover
 author: Woods
@@ -81,7 +81,7 @@ theme: yilia
 deploy:
   type: git
   repo: https://github.com/zhulinn/zhulinn.github.io.git
-  branch: master
+  branch: hexo
 
 # #Search Engine
 # algolia:
