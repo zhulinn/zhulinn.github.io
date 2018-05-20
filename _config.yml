@@ -16,7 +16,7 @@ timezone:
 ## If your site is put in 
 url: https://zhulin.me/
 root: /
-permalink: :title/
+permalink: /posts/:title/
 permalink_defaults:
 
 # Directory
