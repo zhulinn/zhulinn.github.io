@@ -9,7 +9,7 @@ date: 2018-05-18 22:58:12
 
 <!-- https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/XXX.png -->
 
-![](../uploads/post_pics/AWS/header.jpg)
+![](../../uploads/post_pics/AWS/header.jpg)
 
 # 前言
 <hr>
@@ -28,11 +28,11 @@ Amazon对新用户提供一些一年免费的服务。我们需要用的就是AW
 * 每个月上传/下载各15GB免费流量。VPN服务器主要使用的是下载流量。15GB足够满足个人使用。
 * 还有一些免费额度，一般不会超额。建议大家开启超额预警，同时在账单页面关注自己的使用情况。
 
-![](../uploads/post_pics/AWS/billing.png)
+![](../../uploads/post_pics/AWS/billing.png)
 
-![](../uploads/post_pics/AWS/usage.png)
+![](../../uploads/post_pics/AWS/usage.png)
 
-![](../uploads/post_pics/AWS/alert.png)
+![](../../uploads/post_pics/AWS/alert.png)
 
 
 # 流程
@@ -44,43 +44,43 @@ Amazon注册流程在这里就不啰嗦了，网上的教程也很多。注册�
 ## EC2服务器创建
 ### 1. 登陆Amazon AWS，Products标签页下选择Amazon EC2。
 
-![](../uploads/post_pics/AWS/EC2.png)
+![](../../uploads/post_pics/AWS/EC2.png)
 
 
 ### 2. EC2页面上，创建新的实例。
 
-![](../uploads/post_pics/AWS/create.png)
+![](../../uploads/post_pics/AWS/create.png)
 
 注意要看页面右上角，显示着服务器实例的所在区域。如图，
 
-![](../uploads/post_pics/AWS/region.png)
+![](../../uploads/post_pics/AWS/region.png)
 
 我的是Singapore，即我的VPN服务器架设在Singapore节点。服务器将会转发你的上网数据，理论上节点离你越近，你的网速越快。这里可以用[CloudPing.info](http://www.cloudping.info/)对Amazon提供的各个节点进行测速，选择理想的节点。
 
 #### **特别注意**对于新用户, Amazon只提供**Ohio，Oregon，Virginia**三个节点。因此若使用其他节点，会出现创建失败的情况。
 
-![](../uploads/post_pics/AWS/email.png)
+![](../../uploads/post_pics/AWS/email.png)
 <p align="right">From [StackOverflow](https://stackoverflow.com/questions/46649542/aws-ec2-cant-launch-an-instance-account-blocked)</p>
 解决方案如邮件所说，向 aws-verification@amazon.com 发邮件申请既可。
 
 ### 3. 选择Ubuntu Server，实例类型我们选择支持免费套餐的micro类型。
 
-![](../uploads/post_pics/AWS/ubuntu.png)
+![](../../uploads/post_pics/AWS/ubuntu.png)
 
-![](../uploads/post_pics/AWS/micro.png)
+![](../../uploads/post_pics/AWS/micro.png)
 
 ### 4. 保持默认配置不变，我们直接跳到第6步，配置安全组。为了方便，我们可以直接添加如下规则。
 
-![](../uploads/post_pics/AWS/security.png)
+![](../../uploads/post_pics/AWS/security.png)
 
 ### 5. 配置完成后，创建新实例。这时会让你选择服务器的密钥对，我们选择创建新的密钥对。名字随意。创建后，下载并**保持**钥匙对，用来连接服务器。**务必保存好**。
 
-![](../uploads/post_pics/AWS/key.png)
+![](../../uploads/post_pics/AWS/key.png)
 
 
 ### 6. 创建完成后，服务器已经开始运行。我们可以进入EC2面板，查看正在运行的实例。我们需要服务器的公网IP地址，用来连接服务器。
 
-![](../uploads/post_pics/AWS/dashboard.png)
+![](../../uploads/post_pics/AWS/dashboard.png)
 <hr>
 至此，Amazon EC2服务器算是创建好了，下一步我们将在服务器上安装shadowsocks服务器版。参考网上的教程总结如下。
 
@@ -91,25 +91,25 @@ Windows下，需要用到[Xshell5](http://sw.bos.baidu.com/sw-search-sp/software
 安装完成后，我们首先添加密钥对。就是刚刚创建实例时，我们下载的密钥对。
 进入**用户密钥管理员**，导入我们之前下载的.pem文件。
 
-![](../uploads/post_pics/AWS/keymgr.png)
+![](../../uploads/post_pics/AWS/keymgr.png)
 
-![](../uploads/post_pics/AWS/import.png)
+![](../../uploads/post_pics/AWS/import.png)
 
 之后创建与服务器的会话。
 
-![](../uploads/post_pics/AWS/newsession.png)
+![](../../uploads/post_pics/AWS/newsession.png)
 
 填写服务器的公网IP地址。
 
-![](../uploads/post_pics/AWS/hostip.png)
+![](../../uploads/post_pics/AWS/hostip.png)
 
 之后配置认证信息。选择**Public Key**方法，用户名填写为**ubuntu**（否则报错）。用户密钥栏选择我们刚刚导入的密钥对即可。
 
-![](../uploads/post_pics/AWS/authentication.png)
+![](../../uploads/post_pics/AWS/authentication.png)
 
 最后点击确定后，在会话窗口选择创建的会话进行连接。首次连接，会提示警告，选择接受并保存即可。成功连接后如图。
 
-![](../uploads/post_pics/AWS/connect.png)
+![](../../uploads/post_pics/AWS/connect.png)
 
 ### 2. 安装shadowsocks
 
