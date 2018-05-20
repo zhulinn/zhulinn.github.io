@@ -5,7 +5,7 @@
 # Site
 title: Woods
 subtitle: CODE IS POETRY
-description: Artistic Geek & Film Lover
+description: Java Developer
 author: Woods
 language: 
 - en
@@ -80,15 +80,9 @@ theme: yilia
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/zhulinn/zhulinn.github.io.git
+  repo: git@github.com:zhulinn/zhulinn.github.io.git
   branch: hexo
 
-# #Search Engine
-# algolia:
-#  applicationID: 'CMCGM52E1J'
-#  apiKey: '002a7f1ee01196bec5933b1127a6b2ac'
-#  indexName: 'blog'
-#   chunkSize: 5000
 
 # sitemap
 sitemap:
