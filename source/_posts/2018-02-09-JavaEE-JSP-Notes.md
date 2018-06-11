@@ -1,6 +1,7 @@
 ---
 layout: '[post]'
 title: JavaEE JSP Notes
+toc: true
 tags:
   - JSP
 categories: JavaEE

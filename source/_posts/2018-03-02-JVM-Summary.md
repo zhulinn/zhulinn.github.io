@@ -1,6 +1,7 @@
 ---
 layout: '[post]'
 title: JVM知识点
+toc: true
 categories: Java SE
 tags:
   - JVM

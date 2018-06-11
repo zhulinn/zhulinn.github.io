@@ -1,5 +1,6 @@
 ---
 title: 分布式基础知识
+toc: true
 categories: 分布式
 tags:
   - 面试

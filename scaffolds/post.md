@@ -1,7 +1,7 @@
 ---
 title: {{ title }}
 date: {{ date }}
-id:
+toc: true
 categories:
 tags:
 ---

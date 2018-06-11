@@ -1,6 +1,7 @@
 ---
 title: JavaEE Servlet Notes
 categories: JavaEE
+toc: true
 tags:
   - Servlet
   - JSP
