@@ -7,49 +7,18 @@ tags: Spring
 ---
 
 
-# Spring MVC
+# Spring MVC基础知识
+<hr>
 ![](../../uploads/post_pics/spring-mvc/flow.png)
+
+<!-- more -->
 
 ## 搭建Spring MVC
 ### 配置DispatcherServlet
-- 配置web.xml
-```xml  web.xml
-  <servlet>
-      <servlet-name>dispatcher</servlet-name>
-      <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-      <load-on-startup>1</load-on-startup>
-  </servlet>
-    
-    <servlet-mapping>
-        <servlet-name>dispatcher</servlet-name>
-        <url-pattern>/</url-pattern>
-    </servlet-mapping>
-    
-    <context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>/WEB-INF/web-config.xml</param-value>    
-    </context-param>
-
-    <listener>
-        <listener-class>
-            org.springframework.web.context.ContextLoaderListener
-        </listener-class>
-    </listener>
-```
-
-```xml dispatcher-config.xml
-    <context:component-scan base-package="me.zhulin.controller"></context:component-scan>
-
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix">
-            <value>/</value>
-        </property>
-        <property name="suffix">
-            <value>.jsp</value>
-        </property>
-    </bean>
-```
 - Servlet容器 -> `extends AbstractAnnotationConfigDispatcherServletInitializer`
+ServletContainerInitializer接口 -> 
+SpringServletContainerInitializer实现 -> 
+WebApplicationInitializer接口 -> AbstractAnnotationConfigDispatcherServletInitializer实现
 ```java
 public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
@@ -69,6 +38,52 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
     }
 }
 ```
+
+- 配置web.xml
+```xml  web.xml
+  <servlet>
+      <servlet-name>dispatcher</servlet-name>
+      <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+      <load-on-startup>1</load-on-startup>
+      <init-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/dispatcher-context.xml</param-value>    
+      </init-param>
+  </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>dispatcher</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/root-context.xml</param-value>    
+    </context-param>
+
+    <listener>
+        <listener-class>
+            org.springframework.web.context.ContextLoaderListener
+        </listener-class>
+    </listener>
+```
+
+```xml dispatcher-context.xml
+    <context:component-scan base-package="me.zhulin.controller"></context:component-scan>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix">
+            <value>/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>
+```
+`ContextLoaderListener`和`DispatcherServlet`各自都会加载一个Spring应用上下文。
+上下文参数`contextConfigLocation`指定了一个XML文件的地址，这个文件定义了根应用上下文，它会被`ContextLoaderListener`加载。
+若`DispatcherServlet`未指定XML文件地址,`DispatcherServlet`会根据Servlet的名字找到一个文件，并基于该文件加载应用上下文。例如，`DispatcherServlet`会从`/WEBINF/dispatcher-context.xml`文件中加载bean。
+
 
 ### 启动Spring MVC
 1. 使用<mvc:annotationdriven>启用注解驱动的Spring MVC。
@@ -159,9 +174,54 @@ public class SpittleControllerTest {
 }
 ```
 
+# Spring MVC高级技术
+<hr>
+
+## multipart数据
+### 配置multipart解析器
+MultipartResolver接口的实现解析multipart请求数据。
+- CommonsMultipartResolver
+- StandardServletMultipartResolver(Servlet3.0，推荐)
+```java
+@Bean
+public MultipartResolver multipartResolver() throws IOException {
+    return new StandardServletMultipartResolver();
+}
+```
+通过重载`AbstractAnnotationConfigDispatcherServletInitializer`的`customizeRegistration()`配置multipart具体细节：
+```java
+@Override
+protected void customizeRegistration(Dynamic registration) {
+    registration.setMultipartConfig(
+        new MultipartConfigElement("/tmp/spittr/uploads", 2097152, 4194304, 0)); 
+
+    //绝对路径，文件大小，请求大小，全部写入磁盘
+}
+```
+
+```xml
+  <servlet>
+      <servlet-name>dispatcher</servlet-name>
+      <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+      <load-on-startup>1</load-on-startup>
+      <multipart-config>
+        <location>/tmp/spittr/uploads</location>  
+        <max-file-size>2097152</max-file-size>
+        <max-request-size>4194304</max-request-size>
+      </multipart-config>  
+      <init-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/dispatcher-context.xml</param-value>    
+      </init-param>
+  </servlet>    
+```
+
+### 处理multipart请求
+
 
 
 # Spring Boot
+<hr>
 ![Spring-Boot](https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/Spring-boot.png)
 
 The @SpringBootApplication annotation is equivalent to using @Configuration, @EnableAutoConfiguration and @ComponentScan with their default attributes.
