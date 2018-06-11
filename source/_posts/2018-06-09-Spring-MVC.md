@@ -158,7 +158,60 @@ public class SpittleControllerTest {
     }
 }
 ```
+### 处理异常
+#### 异常映射HTTP状态码
+```java
+@ResponseStatus(value=HttpStatus.NOT_FOUND, reason="Spittle Not Found")
+public class SpittleNotFoundException extends RuntimeException {
 
+}
+```
+#### 异常处理方法
+控制器添加@ExceptionHandler方法，处理同一个控制器类中所有指定异常。
+```java
+    @ExceptionHandler(DuplicateSpittleException.class)
+    public String handleDuplicateSpittle(){
+        return "error/duplicate";
+    }
+```
+### 通知
+任意带有@ControllerAdvice注解的类(@Component)，包含：
+- @ExceptionHandler注解标注的方法；
+- @InitBinder注解标注的方法；
+- @ModelAttribute注解标注的方法(方法级：Model添加属性；参数级：绑定Object属性)。
+以上所述的这些方法会运用到整个应用程序所有控制器中带有@RequestMapping注解的方法上。
+```java
+@ControllerAdvice
+public class AppExceptionHandler {
+    @ExceptionHandler(DuplicateSpittleException.class)
+    public String handleDuplicateSpittle(){
+        return "error/duplicate";
+    }
+}
+```
+
+### 重定向请求传递数据
+#### URL模板
+```java
+    model.addAttribute("userName", spitter.getUserName());
+    model.addAttribute("spitterId", spitter.getId());
+    return "redirect:/spitter/{userName}";
+```
+userName作为占位符填充。Model中原始类型数据可添加到URL作为查询参数。spitterId没有匹配占位符，自动以查询参数形式添加到URL。
+
+#### flash属性
+flash属性保存在会话中，然后再放到模型中，因此能够在重定向的过程中存活。
+通过Model子接口RedirectAttributes#addFlashAttribute()，设置flash属性。
+```java
+@RequestMapping(value="/register",method=POST)
+public String processRegistration(Spitter spitter, RedirectAttributes model) {
+    spitterRepository.save(spitter);
+
+    model.addAttribute("userName", spitter.getUserName());
+    model.addFlashAttribute("spitter",spitter);
+    return "redirect:/spitter/{userName}";
+}
+```
 
 
 # Spring Boot
