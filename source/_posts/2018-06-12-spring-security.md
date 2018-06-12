@@ -1,13 +1,17 @@
 ---
-title: spring-security
+title: Spring Security
 toc: true
 date: 2018-06-12 10:36:17
 categories: Java Web
 tags: Spring
 ---
 
+## Spring Security原理
 ![](../../uploads/post_pics/spring/delegatingfilterproxy.png)
+DelegatingFilterProxy是一个特殊的Servlet Filter，将工作委托给javax.servlet.Filter实现类。
+
 <!-- more -->
+
 ## 配置DelegatingFilterProxy
 ```java
 public class SecurityWebInitializer extends AbstractSecurityWebApplicationInitializer {
