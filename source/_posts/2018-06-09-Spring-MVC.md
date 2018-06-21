@@ -241,7 +241,7 @@ public class SpittleNotFoundException extends RuntimeException {
     }
 ```
 
-**通知**
+## 通知
 任意带有@ControllerAdvice注解的类(@Component)，包含：
 - @ExceptionHandler注解标注的方法；
 - @InitBinder注解标注的方法；
@@ -256,6 +256,27 @@ public class AppExceptionHandler {
     }
 }
 ```
+
+```java
+
+public class MyCustomEnumConverter implements Converter<String, SortEnum> {
+    @Override
+    public SortEnum convert(String source) {
+       try {
+          return SortEnum.valueOf(source);
+       } catch(Exception e) {
+          return null; // or SortEnum.asc
+       }
+    }
+}
+```
+```java
+@InitBinder
+public void initBinder(WebDataBinder dataBinder) {
+    dataBinder.registerCustomEditor(Currency.class, new CurrencyEnumConverter());
+}
+```
+
 
 ## 重定向请求传递数据
 ### URL模板

@@ -13,4 +13,4 @@ Spring JDBC提供与平台无关的统一持久化异常。
 分，而回调处理自定义的数据访问代码。针对不同持久化平台，Spring提供多个可选模板。
 ![](../../uploads/post_pics/spring/template.png)
 
-## http://m.jd.id/redis/switch?redisKey=abtest.issue.switch&value=false
+## 
