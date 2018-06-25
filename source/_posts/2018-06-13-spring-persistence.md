@@ -349,8 +349,9 @@ public RedisConnectionFactory redisCF() {
 ```
 
 ## 缓存
+缓存是一种面向切面的行为。
 1. 启用缓存,`@EnableCaching` or `<cache:annotation-driven />`
-- EhCache
+2. 配置缓存管理器
 ```java
 @Configuration
 @EnableCaching
@@ -392,3 +393,17 @@ public class CachingConfig {
 	}
 }
 ```
+3. 缓存注解
+
+- @Cacheable：调用前检查缓存 
+- @CachePut： 调用前不检查缓存
+- @CacheEvict：清除缓存
+- @Caching
+
+@Cacheable和@CachePut有一些属性是共有的，默认的缓存key要基于方法的参数来确定。
+- value: 缓存名称
+- condition：禁用缓存
+- key： 缓存key
+- unless：阻止写入缓存
+
+
