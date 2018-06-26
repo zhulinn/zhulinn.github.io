@@ -186,3 +186,69 @@ HTTP Basic实际上就是将我们的用户名和密码连接起来`user:passwor
 	- `<security:accesscontrollist>`
 	- `<security:authentication property="principal.username">` 获取认证对象信息
 	- `<security:authorize access="hasRole('ROLE_SPITTER')" url="/admin">` 
+
+## 方法安全性
+### 注解保护方法
+**启用基于注解的方法安全性**
+```java
+@Configuration
+@EnableGlobalMethodSecurity(securedEnabled=true)
+public class MethodSecurityConfig extends GlobalMethodSecurityConfiguration {
+
+}
+```
+
+- @Secured({"ROLE_SPITTER","ROLE_ADMIN"})
+- @RolesAllowed({"ROLE_SPITTER","ROLE_ADMIN"}) 
+
+### SpEL表达式
+**启用基于表达式的方法安全性**
+```java
+@Configuration
+@EnableGlobalMethodSecurity(prePostEnabled=true)
+public class MethodSecurityConfig extends GlobalMethodSecurityConfiguration {
+
+}
+```
+
+- @PreAuthorize
+```java
+@PreAuthorize("(hasRole('ROLE_SPITTER') and #spittle.text.length() <= 140)"
+				"or hasRole('ROLE_PREMIUM')")
+public void addSpittle(Spittle spittle){
+
+}
+```
+- @PostAuthorize
+```java
+@PostAuthorize("returnObject.spitter.username == princical.username")
+public Spittle getSpittleById(long id) {
+
+}
+```
+- @PostFilter
+```java
+@PostFilter("hasRole('ROLE_ADMIN') || filterObject.spitter.username == principal.name")
+public List<Spittle> getOffensiveSpittles() {
+
+}
+```
+- @PreFilter 
+```java
+@PreFilter("hasRole('ROLE_ADMIN') || targetObject.spitter.username == principal.name")
+public void deleteSpittles(List<Spittle> spittles) {
+
+}
+```
+
+**自定义PermissionEvaluator**
+1. 实现PermissionEvaluator接口实例
+2. 注册
+```java
+	@Override
+	protected MethodSecurityExpressionHandler createExpressionHandler(){
+		DefaultMethodSecurityExpressionHandler expressionHandler = new DefaultMethodSecurityExpressionHandler();
+		expressionHandler.setPermissionEvaluator(new SpittlePermissionEvaluator());
+		return expressionHandler;
+	}
+````
