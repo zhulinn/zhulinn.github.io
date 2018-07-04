@@ -16,7 +16,7 @@ timezone:
 ## If your site is put in 
 url: https://zhulin.me/
 root: /
-permalink: /posts/:title/
+permalink: posts/:title/
 permalink_defaults:
 
 # Directory
@@ -74,7 +74,8 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: yilia
+#theme: yilia
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -90,21 +91,21 @@ sitemap:
 baidusitemap:
   path: baidusitemap.xml
 
-jsonContent:
-  meta: false
-  pages: false
-  posts:
-    title: true
-    date: true
-    path: true
-    text: false
-    raw: false
-    content: false
-    slug: false
-    updated: false
-    comments: false
-    link: false
-    permalink: false
-    excerpt: false
-    categories: false
-    tags: true
+# jsonContent:
+#   meta: false
+#   pages: false
+#   posts:
+#     title: true
+#     date: true
+#     path: true
+#     text: false
+#     raw: false
+#     content: false
+#     slug: false
+#     updated: false
+#     comments: false
+#     link: false
+#     permalink: false
+#     excerpt: false
+#     categories: false
+#     tags: true
