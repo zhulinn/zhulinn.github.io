@@ -1,4 +1,4 @@
-﻿---
+---
 title: Spring基础
 categories: Java Web
 tags:
@@ -46,7 +46,7 @@ ScopedProxyMode.TARGET_CLASS生成基于类的代理。
 
 
 ## Bean Configuration
-1. **XML Based Configuration** 
+1.**XML Based Configuration** 
 
 ```xml
 <beans>
@@ -63,16 +63,12 @@ ScopedProxyMode.TARGET_CLASS生成基于类的代理。
 	
 </beans>
 ```
-
-2. **Annotation Based Configuration** - `@Service` or `@Component`, `@Scope` + `@ComponentScan`
-
+2. Annotation Based Configuration - `@Service` or `@Component`, `@Scope` + `@ComponentScan`
  隐式的bean发现机制和自动装配 
-
     - 组件扫描(component scanning) `@ComponentScan` or `<context:component-scand>`
     - 自动装配(autowiring) `@Autowired`
-
+	
  Automatic configuration has its roots in a Spring technique known as **auto-wiring** and another technique known as **component-scanning**. 
-
 ```java
 package com.journaldev.spring.beans;
 
@@ -104,8 +100,7 @@ public class HomeController {
 	
 }
 ```
-
-3. **Java Based Configuration** -  `@Configuration`,  `@Bean`
+3. Java Based Configuration  -  `@Configuration`,  `@Bean`
 
 ```java
 package com.journaldev.spring.main;
