@@ -13,15 +13,15 @@ language:
 timezone: 
 
 # URL
-## If your site is put in 
-url: https://zhulin.me/
-root: /
-permalink: posts/:title/
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://zhulin.me/blog
+root: /blog/
+permalink: /:title
 permalink_defaults:
 
 # Directory
 source_dir: source
-public_dir: public
+public_dir: public/blog
 tag_dir: tags
 archive_dir: archives
 category_dir: categories

@@ -1,9 +1,11 @@
 ---
-title: 'A Online Shopping Store with Spring Boot, Hibernate, Freemarker & Bootstrap'
+title: 'A Shopping Store with Spring Boot, Hibernate, Freemarker & Bootstrap'
 categories: Spring
 tags:
   - Spring Boot
 date: 2018-03-15 10:12:58
+top: true
+sticky: 100
 ---
 
 **Demo:** [E-Shop](https://e-shop-.herokuapp.com)

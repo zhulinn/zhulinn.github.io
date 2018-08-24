@@ -58,12 +58,12 @@ footer:
 
   theme:
     # Theme & scheme info link (Theme - NexT.scheme).
-    enable: true
+    enable: false
     # Version info of NexT after scheme info (vX.X.X).
     version: false
   # -------------------------------------------------------------
   # Any custom text can be defined here.
-  custom_text: Hosted by <a target="_blank" href="https://www.netlify.com/">Netlify</a>
+  custom_text: #Hosted by <a target="_blank" href="https://www.netlify.com/">Netlify</a>
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -92,7 +92,8 @@ index_with_subtitle: false
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  home: / || home
+  home: ../ || home
+  Blog: / || edit
   #about: /about/ || user
   tags: /tags/ || tags
   categories: /categories/ || th
