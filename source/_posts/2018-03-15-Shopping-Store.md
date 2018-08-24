@@ -1,8 +1,9 @@
 ---
 title: 'A Shopping Store with Spring Boot, Hibernate, Freemarker & Bootstrap'
-categories: Spring
+categories: Java Web
 tags:
   - Spring Boot
+  - Projects
 date: 2018-03-15 10:12:58
 top: true
 sticky: 100

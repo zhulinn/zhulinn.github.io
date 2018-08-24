@@ -2,7 +2,7 @@
 title: Spring数据持久化
 toc: true 
 date: 2018-06-13 09:40:49
-categories: Java web
+categories: Java Web
 tags: Spring
 ---
 
