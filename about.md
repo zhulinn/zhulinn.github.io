@@ -6,7 +6,7 @@ layout: page
 <img src="https://zhulin.me/blog/uploads/avatar.jpg" height="300px" width ="300px"/>
 
 <p style="text-align:justify">
-Hey there! This is Lin Zhu. You may find my nickname is Woods. A MS CS student at <a href="https://en.wikipedia.org/wiki/North_Carolina_State_University">North Carolina State University</a>. I am enthusiastic in Web development and AI. I enjoy learning cutting-edge technology to solve challenging problems. I am good at back-end, especially for Java and Spring. I have interned as Backend Engineer at <a href="https://en.wikipedia.org/wiki/JD.com">JD.com</a> this summer, which is the world's leading company in high tech and AI delivery. 
+Hey there! This is Lin Zhu. You may find my nickname is Woods. I'm a MS CS student at <a href="https://en.wikipedia.org/wiki/North_Carolina_State_University">North Carolina State University</a>. I am enthusiastic in Web development and AI. I enjoy learning cutting-edge technology to solve challenging problems. I am good at back-end, especially for Java and Spring. I have interned as Backend Engineer at <a href="https://en.wikipedia.org/wiki/JD.com">JD.com</a> this summer, which is the world's leading company in high tech and AI delivery. 
 </p>
 
 <strong>I am seeking Full-Time opportunities in Software/Web Development.</strong>
