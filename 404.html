@@ -4,18 +4,17 @@ permalink: /404.html
 ---
 
 <section class="lost-container">
+	   <div><b>Website has been maintained recently.</b></div>
+   <div><a id="link" href="/"><b>Try this link :)</b></a></div>
   <h1>Uh oh!</h1>
   <div class="link">
     <img class="selfie" alt="{{ site.name }}" src="{{ site.url }}/assets/images/error.gif" />
   </div>
   <br />
   <br />
-   <div>Website has been maintained recently.</div>
-   <div><a id="link" href="/">Try this link:)</a></div>
-  <div>or</div>
   <a href="/">Take me home!</a>
   <script>
-  var redirect_url = window.location.pathname.slice(6);
+  var redirect_url = "/blog" + window.location.pathname.slice(6);
   var linkElm = document.getElementById("link");
   linkElm.href = redirect_url;
 </script>
