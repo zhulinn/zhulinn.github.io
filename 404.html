@@ -14,8 +14,15 @@ permalink: /404.html
   <br />
   <a href="/">Take me home!</a>
   <script>
-  var redirect_url = "/blog" + window.location.pathname.slice(6);
-  var linkElm = document.getElementById("link");
-  linkElm.href = redirect_url;
+    var url = window.location.pathname.toLowerCase();
+    
+    if(!url.startsWith("/blog/")) {
+      if(url.startsWith("/posts/")) {
+        url = url.slice(6);
+      } 
+      var redirect_url = "/blog" + url;
+      windows.location.replace(redirect_url);
+    }
+
 </script>
 </section>
