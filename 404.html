@@ -16,13 +16,13 @@ permalink: /404.html
   <script>
     var url = window.location.pathname.toLowerCase();
     
-    if(!url.startsWith("/blog/")) {
+  
       if(url.startsWith("/posts/")) {
         url = url.slice(6);
       } 
       var redirect_url = "/blog" + url;
       window.location.replace(redirect_url);
-    }
+    
 
 </script>
 </section>
