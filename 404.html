@@ -10,5 +10,13 @@ permalink: /404.html
   </div>
   <br />
   <br />
+   <div>Website has been maintained recently.</div>
+   <div><a id="link" href="/">Try this link:)</a></div>
+  <div>or</div>
   <a href="/">Take me home!</a>
+  <script>
+  var redirect_url = window.location.pathname.slice(6);
+  var linkElm = document.getElementById("link");
+  linkElm.href = redirect_url;
+</script>
 </section>
