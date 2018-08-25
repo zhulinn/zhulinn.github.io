@@ -8,15 +8,15 @@ description: Personal website about technology and stuff related
 # if it's an external image, update below for true
 # better with square images
 external-image: true
-picture: https://zhulin.me/blog/uploads/avatar.jpg
+picture: //zhulin.me/blog/uploads/avatar.jpg
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
 resume: true
 resume-external: true
-resume-url: https://drive.google.com/open?id=1utJ-N2jPw9n25Ib8pXBi-qGhFOryA5th
+resume-url: //zhulin.me/blog/uploads/Lin_Zhu_CV.pdf
 
-url: https://zhulin.me
+url: //zhulin.me
 # your url: http://USERNAME.github.io
 
 permalink: /:title/
@@ -52,20 +52,6 @@ github: zhulinn
 # vimeo: myvimeo
 # lanyrd: mylanyrd
 email: julian.lin.zhu@gmail.com
-
-authors:
-    johndoe:
-        name: John Doe
-        bio: A Man who travels the world eating noodles
-        external-image: false
-        picture: assets/images/profile.jpg
-        twitter: johndoe
-    jamesfoster:
-        name: James Foster
-        bio: A Man who develops software with coffee
-        external-image: false
-        picture: assets/images/james.jpg
-        twitter: jamesfoster
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal

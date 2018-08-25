@@ -28,7 +28,7 @@ Hey there! This is Lin Zhu. You may find my nickname is Woods. A MS CS student a
 </ul>
 
 <h2>Projects</h2>
-<div class="projects">
+
 {% include highlighted-projects.html %}
-</div>
+
 
