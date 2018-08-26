@@ -8,13 +8,13 @@ description: Personal website about technology and stuff related
 # if it's an external image, update below for true
 # better with square images
 external-image: true
-picture: //zhulin.me/blog/uploads/avatar.jpg
+picture: /blog/uploads/avatar.jpg
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
 resume: true
 resume-external: true
-resume-url: //zhulin.me/blog/uploads/Lin_Zhu_CV.pdf
+resume-url: /blog/uploads/Lin_Zhu_CV.pdf
 
 url: //zhulin.me
 # your url: http://USERNAME.github.io
